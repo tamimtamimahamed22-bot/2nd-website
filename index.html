@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn digital marketing strategies, SEO techniques, and content marketing best practices. Your complete guide to online marketing success."
+    />
+    <meta
+      name="keywords"
+      content="digital marketing, SEO, content marketing, online marketing, marketing strategies"
+    />
+    <meta name="author" content="Digital Marketing Pro" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta
+      property="og:title"
+      content="Digital Marketing Academy - Learn SEO & Marketing"
+    />
+    <meta
+      property="og:description"
+      content="Master digital marketing with our comprehensive guides and resources."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/og-image.jpg"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Digital Marketing Academy" />
+    <meta
+      name="twitter:description"
+      content="Master digital marketing with our comprehensive guides and resources."
+    />
+
+    <title>
+      Digital Marketing Academy - Learn SEO & Content Marketing | Free Resources
+    </title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Digital Marketing Academy",
+        "description": "Learn digital marketing strategies, SEO techniques, and content marketing best practices.",
+        "url": "https://yourwebsite.com",
+        "logo": "https://yourwebsite.com/logo.png",
+        "sameAs": [
+          "https://facebook.com/digitalmarketingacademy",
+          "https://twitter.com/dma",
+          "https://linkedin.com/company/digitalmarketingacademy"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-123-4567",
+          "contactType": "Customer Service"
+        }
+      }
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+        --border-color: #e5e7eb;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--white);
+      }
+
+      /* Header Styles */
+      header {
+        background-color: var(--white);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: var(--white);
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: var(--white);
+        color: var(--primary-color);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Section Styles */
+      section {
+        padding: 4rem 0;
+      }
+
+      section h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      section .subtitle {
+        text-align: center;
+        color: var(--text-light);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+      }
+
+      /* Features Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        color: var(--text-dark);
+      }
+
+      .feature-card p {
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      /* About Section */
+      #about {
+        background-color: var(--bg-light);
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .about-text p {
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      }
+
+      .about-image {
+        background-color: var(--primary-color);
+        height: 400px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 3rem;
+      }
+
+      /* Services Section */
+      .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .service-item {
+        background-color: var(--bg-light);
+        padding: 2rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .service-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        color: var(--text-dark);
+      }
+
+      .service-item p {
+        color: var(--text-light);
+      }
+
+      /* Contact Section */
+      #contact {
+        background-color: var(--bg-light);
+      }
+
+      .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-form {
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-button:hover {
+        background-color: var(--secondary-color);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--text-dark);
+        color: var(--white);
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section a {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #374151;
+        color: #9ca3af;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        section h2 {
+          font-size: 2rem;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+
+        .about-image {
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero {
+          padding: 4rem 1rem;
+        }
+
+        .hero h1 {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">Digital Marketing Academy</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Master Digital Marketing & SEO</h1>
+        <p>
+          Learn proven strategies to grow your online presence, drive traffic,
+          and convert visitors into customers.
+        </p>
+        <a href="#contact" class="cta-button">Get Started Today</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="container">
+        <h2>Why Choose Us</h2>
+        <p class="subtitle">
+          Comprehensive digital marketing education designed for success
+        </p>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>SEO Mastery</h3>
+            <p>
+              Learn advanced SEO techniques including on-page optimization,
+              technical SEO, link building, and keyword research to rank higher
+              in search engines.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Analytics & Insights</h3>
+            <p>
+              Understand your data with Google Analytics, Search Console, and
+              other powerful tools to make informed marketing decisions.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">✍️</div>
+            <h3>Content Marketing</h3>
+            <p>
+              Create compelling content that engages your audience and drives
+              conversions through strategic storytelling and optimization.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Social Media Strategy</h3>
+            <p>
+              Build and execute effective social media campaigns across all
+              major platforms to increase brand awareness and engagement.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Paid Advertising</h3>
+            <p>
+              Master Google Ads, Facebook Ads, and other PPC platforms to
+              maximize ROI and reach your target audience effectively.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📧</div>
+            <h3>Email Marketing</h3>
+            <p>
+              Build effective email campaigns that nurture leads, retain
+              customers, and drive revenue with proven email marketing
+              strategies.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p class="subtitle">
+          Tailored solutions for your digital marketing needs
+        </p>
+
+        <div class="services-list">
+          <article class="service-item">
+            <h3>SEO Consultation</h3>
+            <p>
+              Get expert advice on improving your website's search engine
+              rankings and organic traffic.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <h3>Content Strategy</h3>
+            <p>
+              Develop a comprehensive content plan aligned with your business
+              goals and target audience.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <h3>Technical SEO Audit</h3>
+            <p>
+              Identify and fix technical issues that may be preventing your site
+              from ranking well.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <h3>Link Building</h3>
+            <p>
+              Build high-quality backlinks to increase your domain authority and
+              search visibility.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p class="subtitle">
+          Your trusted partner in digital marketing education
+        </p>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Empowering Marketers Since 2015</h3>
+            <p>
+              Digital Marketing Academy was founded with a simple mission: to
+              make high-quality digital marketing education accessible to
+              everyone. We believe that anyone can master the art and science of
+              online marketing with the right guidance and resources.
+            </p>
+            <p>
+              Our team of experienced marketers and SEO specialists has helped
+              thousands of students and businesses achieve their online
+              marketing goals. We stay current with the latest industry trends
+              and algorithm updates to ensure our students always have the most
+              relevant knowledge.
+            </p>
+            <p>
+              Whether you're a beginner looking to start your digital marketing
+              journey or an experienced marketer wanting to sharpen your skills,
+              we have the resources and expertise to help you succeed.
+            </p>
+          </div>
+          <div class="about-image">📚</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="subtitle">Have questions? We'd love to hear from you</p>
+
+        <div class="contact-content">
+          <form class="contact-form" action="/submit-form" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="How can we help?"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Tell us more about your inquiry..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Digital Marketing Academy</h4>
+            <p>
+              Your trusted resource for learning digital marketing, SEO, content
+              strategy, and online business growth.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/guides">SEO Guides</a></li>
+              <li><a href="/tutorials">Tutorials</a></li>
+              <li><a href="/faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>Email: info@digitalmarketingacademy.com</li>
+              <li>Phone: +1-800-123-4567</li>
+              <li>Address: 123 Marketing Street, Digital City, DC 12345</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Digital Marketing Academy. All rights reserved. |
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
